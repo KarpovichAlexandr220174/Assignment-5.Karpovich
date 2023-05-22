@@ -131,6 +131,7 @@ public class BST<K extends Comparable<K>, V> {
         }
     }
 
+    //height method
     private int height() {
         return height(root);
     }
