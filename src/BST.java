@@ -131,18 +131,18 @@ public class BST<K extends Comparable<K>, V> {
         }
     }
 
-    //height method
+    // height method of binary tree
     private int height() {
-        return height(root);
+        return height(root); // using height method for our binary tree with root, as a parameter
     }
 
     private int height(Node node) {
         if (node == null) {
-            return 0;
+            return 0; // checking for node == null, return "0" if true
         }
-        int leftHeight = height(node.left);
-        int rightHeight = height(node.right);
+        int leftHeight = height(node.left); // recursive algorithm for counting elements of left-node
+        int rightHeight = height(node.right); // recursive algorithm for counting elements of right-node
 
-        return Math.max(leftHeight, rightHeight) + 1;
+        return Math.max(leftHeight, rightHeight) + 1; // return a maximum between leftHeight and rightHeight + 1, because also we have a root
     }
 }
